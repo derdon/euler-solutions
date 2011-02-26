@@ -2,7 +2,7 @@ from itertools import ifilter
 
 
 def is_multiple_of_three_or_five(num):
-    return num % 3 == 0 or num % 5 == 0
+    return any(num % x == 0 for x in [3, 5])
 
 
 def main():
