@@ -1,22 +1,16 @@
-from itertools import imap
 import sys
 
 
-def square(x):
-    return x ** 2
+def sum_of_squares(n):
+    return n * (n + 1) * (2 * n + 1) / 6
 
 
-def sum_of_squares(numbers):
-    return sum(imap(square, numbers))
-
-
-def square_of_sums(numbers):
-    return square(sum(numbers))
+def square_of_sums(n):
+    return (x * (x + 1) / 2) ** 2
 
 
 def main(x):
-    seq = xrange(1, x + 1)
-    return square_of_sums(seq) - sum_of_squares(seq)
+    return square_of_sums(x) - sum_of_squares(x)
 
 
 if __name__ == '__main__':
