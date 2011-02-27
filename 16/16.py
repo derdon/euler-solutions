@@ -1,3 +1,8 @@
+# (c) Simon Liedtke <liedtke.simon@googlemail.com> under the ISC license.
+# See COPYING for more details.
+
+
+def main():
 from itertools import imap
 import sys
 
