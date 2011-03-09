@@ -2,7 +2,6 @@
 # See COPYING for more details.
 
 
-def main():
 from itertools import imap, izip, count, tee
 import string
 import sys
