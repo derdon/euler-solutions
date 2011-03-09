@@ -2,7 +2,6 @@
 # See COPYING for more details.
 
 
-def main():
 from fractions import gcd
 
 
