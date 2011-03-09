@@ -59,6 +59,5 @@ def main(argv=None):
         triangle_words = get_triangle_words(f)
     return len(triangle_words)
 
-
 if __name__ == '__main__':
     print main()
