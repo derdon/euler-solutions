@@ -14,4 +14,4 @@ def fib():
             return i
 
 if __name__ == '__main__':
-    print fib()
+    print(fib())

@@ -1,9 +1,10 @@
 # (c) Simon Liedtke <liedtke.simon@googlemail.com> under the ISC license.
 # See COPYING for more details.
 
-from itertools import imap
-import string
 import sys
+if sys.version_info <= (3,):
+    from itertools import imap as map
+import string
 
 
 def letter2number(letter):
@@ -12,7 +13,7 @@ def letter2number(letter):
 
 
 def score_name(name, pos):
-    return sum(imap(letter2number, name)) * pos
+    return sum(map(letter2number, name)) * pos
 
 
 def parse_file(f):
@@ -23,7 +24,7 @@ def parse_file(f):
 
 def score_all_names(f):
     names = parse_file(f)
-    return sum(score_name(name, pos+1) for pos, name in enumerate(names))
+    return sum(score_name(name, pos + 1) for pos, name in enumerate(names))
 
 
 def main(argv=None):
@@ -38,4 +39,4 @@ def main(argv=None):
     return total_scoring
 
 if __name__ == '__main__':
-    print main()
+    print(main())

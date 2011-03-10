@@ -2,12 +2,13 @@
 # See COPYING for more details.
 
 
-from itertools import imap
 import sys
+if sys.version_info <= (3,):
+    from itertools import imap as map
 
 
 def main(x):
-    return sum(imap(int, str(2 ** x)))
+    return sum(map(int, str(2 ** x)))
 
 
 if __name__ == '__main__':
@@ -15,4 +16,4 @@ if __name__ == '__main__':
         x = int(sys.argv[1])
     except (IndexError, ValueError):
         x = 1000
-    print main(x)
+    print(main(x))

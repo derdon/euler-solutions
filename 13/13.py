@@ -2,7 +2,6 @@
 # See COPYING for more details.
 
 
-def main():
 numbers = [
     37107287533902102798797998220837590246510135740250,
     46376937677490009712648124896970078050417018260538,
@@ -112,4 +111,4 @@ def main(numbers):
 
 
 if __name__ == '__main__':
-    print main(numbers)
+    print(main(numbers))
