@@ -10,7 +10,7 @@ def sum_of_squares(n):
 
 
 def square_of_sums(n):
-    return (x * (x + 1) / 2) ** 2
+    return (n * (n + 1) / 2) ** 2
 
 
 def main(x):
